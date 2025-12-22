@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import * as S from "./style";
 
@@ -12,49 +11,33 @@ const MyPage = () => {
     const response = await fetch(`${API_BASE_URL}/api/member/logout`, {
       method: "DELETE",
       credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
     });
     localStorage.clear();
     if (!response.ok) {
-      throw new Error("로그아웃에 실패했습니다.");
+      console.error("로그아웃에 실패했습니다.");
     }
   };
 
   const handleLogout = () => {
     if (window.confirm("로그아웃 하시겠습니까?")) {
       logOutFunction().then(() => {
-        navigate("/");
+        navigate("/", { replace: true });
       });
     }
   };
 
-  const getMemberId = () => {
-    const member = JSON.parse(localStorage.getItem("member") || "null");
-    return member?.memberId ?? member?.id ?? null;
-  };
-
   const withdrawFun = async () => {
-    const memberId = getMemberId();
-    if (!memberId) throw new Error("memberId를 찾을 수 없습니다.");
-
-    const response = await fetch(
-      `${API_BASE_URL}/api/member/withdraw?memberId=${memberId}`,
-      {
-        method: "DELETE",
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        },
-        credentials: "include",
-      }
-    );
-
-    const result = await response.json().catch(() => ({}));
-
-    if (!response.ok) {
-      const message = result?.message || "회원탈퇴에 실패했습니다.";
-      throw new Error(message);
-    }
-
-    localStorage.clear();
+    await fetch(`${API_BASE_URL}/my-page/unregister`, {
+      method: "DELETE",
+      credentials: "include",
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    });
   };
 
   const handleWithdraw = () => {
@@ -62,10 +45,11 @@ const MyPage = () => {
       withdrawFun()
         .then(() => {
           alert("탈퇴가 완료되었습니다.");
-          navigate("/");
+          localStorage.clear();
         })
+        .then(() => navigate("/", { replace: true }))
         .catch((error) => {
-          console.error(error);
+          console.error(error || "회원탈퇴에 실패했습니다.");
         });
     }
   };
