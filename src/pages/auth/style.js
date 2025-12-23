@@ -1,10 +1,10 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   width: 100%;
   min-height: 100vh;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   display: flex;
   flex-direction: column;
 `;
@@ -12,13 +12,13 @@ export const Container = styled.div`
 export const Header = styled.header`
   padding: 40px 24px 30px;
   text-align: center;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 `;
 
 export const Logo = styled(Link)`
   font-size: 48px;
   font-weight: 800;
-  color: #CD0B16;
+  color: #cd0b16;
   margin: 0 0 8px 0;
   letter-spacing: -2px;
   text-decoration: none;
@@ -42,7 +42,7 @@ export const MainContent = styled.main`
 `;
 
 export const FormCard = styled.div`
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 12px;
   padding: 32px 24px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -89,7 +89,7 @@ export const Input = styled.input`
   border-radius: 8px;
   font-size: 15px;
   color: #333333;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-sizing: border-box;
   transition: all 0.2s ease;
 
@@ -99,43 +99,42 @@ export const Input = styled.input`
 
   &:focus {
     outline: none;
-    border-color: #CD0B16;
-    background-color: #FAFAFA;
+    border-color: #cd0b16;
+    background-color: #fafafa;
   }
 `;
 
 export const FieldError = styled.div`
   font-size: 12px;
-  color: #CD0B16;
+  color: #cd0b16;
   margin-top: -4px;
 `;
 
 export const ErrorMessage = styled.div`
   padding: 12px;
-  background-color: #FFEBEE;
-  border: 1px solid #FFCDD2;
+  background-color: #ffebee;
+  border: 1px solid #ffcdd2;
   border-radius: 8px;
   font-size: 14px;
-  color: #CD0B16;
+  color: #cd0b16;
   text-align: center;
 `;
 
-
 export const InfoMessage = styled.div`
   padding: 12px;
-  background-color: #E8F5E9;
-  border: 1px solid #C8E6C9;
+  background-color: #e8f5e9;
+  border: 1px solid #c8e6c9;
   border-radius: 8px;
   font-size: 14px;
-  color: #1B5E20;
+  color: #1b5e20;
   text-align: center;
 `;
 
 export const SubmitButton = styled.button`
   width: 100%;
   height: 52px;
-  background: linear-gradient(135deg, #CD0B16 0%, #C30D16 50%, #B80F16 100%);
-  color: #FFFFFF;
+  background: linear-gradient(135deg, #cd0b16 0%, #c30d16 50%, #b80f16 100%);
+  color: #ffffff;
   border: none;
   border-radius: 10px;
   font-size: 16px;
@@ -145,7 +144,7 @@ export const SubmitButton = styled.button`
   margin-top: 8px;
 
   &:hover {
-    background: linear-gradient(135deg, #B80F16 0%, #B00D14 50%, #A50F14 100%);
+    background: linear-gradient(135deg, #b80f16 0%, #b00d14 50%, #a50f14 100%);
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(195, 13, 22, 0.3);
   }
@@ -189,15 +188,15 @@ export const SocialButtons = styled.div`
 export const SocialButton = styled.button`
   width: 100%;
   height: 48px;
-  background-color: ${props => {
-    if (props.$variant === 'kakao') return '#FEE500';
-    if (props.$variant === 'naver') return '#03C75A';
-    return '#FFFFFF';
+  background-color: ${(props) => {
+    if (props.$variant === "kakao") return "#FEE500";
+    if (props.$variant === "naver") return "#03C75A";
+    return "#FFFFFF";
   }};
-  color: ${props => {
-    if (props.$variant === 'kakao') return '#000000';
-    if (props.$variant === 'naver') return '#FFFFFF';
-    return '#333333';
+  color: ${(props) => {
+    if (props.$variant === "kakao") return "#000000";
+    if (props.$variant === "naver") return "#FFFFFF";
+    return "#333333";
   }};
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 8px;
@@ -236,7 +235,7 @@ export const LinkText = styled.p`
 `;
 
 export const StyledLink = styled(Link)`
-  color: #CD0B16;
+  color: #cd0b16;
   text-decoration: none;
   font-weight: 600;
 
@@ -244,7 +243,6 @@ export const StyledLink = styled(Link)`
     text-decoration: underline;
   }
 `;
-
 
 export const ButtonRow = styled.div`
   display: flex;
@@ -257,14 +255,13 @@ export const ButtonRow = styled.div`
   }
 `;
 
-
 export const GhostButton = styled.button`
   height: 52px;
   margin-top: 8px;
   padding: 0 16px;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.12);
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #333333;
   font-size: 14px;
   font-weight: 600;
@@ -288,11 +285,10 @@ export const GhostButton = styled.button`
   }
 `;
 
-
 export const TextButton = styled.button`
   border: none;
   background: transparent;
-  color: #CD0B16;
+  color: #cd0b16;
   font-weight: 600;
   cursor: pointer;
   padding: 0;
@@ -306,3 +302,47 @@ export const TextButton = styled.button`
     cursor: not-allowed;
   }
 `;
+
+export const LoginTypeButton = styled.button`
+  width: 100%;
+  height: 200px;
+  background: #e0e0e0;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+
+  &:hover {
+    background: linear-gradient(135deg, #b80f16 0%, #b00d14 50%, #a50f14 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(195, 13, 22, 0.3);
+    color: #fff;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+`;
+
+export const LoginTypeText = styled.div`
+  font-size: 36px;
+  margin: 30px 20px;
+`
+export const LoginTypeArrow = styled.div`
+  align-self: end;
+  font-size: 28px;
+  margin: 30px 20px;
+`
