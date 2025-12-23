@@ -303,30 +303,64 @@ export const TextButton = styled.button`
   }
 `;
 
+export const LoginTypeButtonWrapper = styled.div`
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  height: auto;
+`;
+
 export const LoginTypeButton = styled.button`
   width: 100%;
-  height: 200px;
-  background: #e0e0e0;
-  color: #000;
-  border: none;
-  border-radius: 10px;
+  min-height: 160px;
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+  color: #333333;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
-  margin-top: 8px;
+  transition: all 0.3s ease;
+  margin-bottom: 16px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
 
   &:hover {
-    background: linear-gradient(135deg, #b80f16 0%, #b00d14 50%, #a50f14 100%);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(195, 13, 22, 0.3);
-    color: #fff;
+    background: linear-gradient(135deg, #cd0b16 0%, #c30d16 50%, #b80f16 100%);
+    border-color: #cd0b16;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(195, 13, 22, 0.35);
+    color: #ffffff;
+
+    &::before {
+      opacity: 1;
+    }
   }
 
   &:active {
-    transform: translateY(0);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(195, 13, 22, 0.3);
   }
 
   &:disabled {
@@ -335,14 +369,38 @@ export const LoginTypeButton = styled.button`
     transform: none;
     box-shadow: none;
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    min-height: 140px;
+    padding: 20px;
+  }
 `;
 
 export const LoginTypeText = styled.div`
-  font-size: 36px;
-  margin: 30px 20px;
-`
+  font-size: 32px;
+  font-weight: 700;
+  transition: color 0.3s ease;
+  line-height: 1.2;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+`;
+
 export const LoginTypeArrow = styled.div`
-  align-self: end;
-  font-size: 28px;
-  margin: 30px 20px;
-`
+  font-size: 32px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  line-height: 1;
+
+  ${LoginTypeButton}:hover & {
+    transform: translateX(4px);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+`;
