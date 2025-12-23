@@ -162,7 +162,7 @@ const StaffLoginContainer = () => {
             <S.LinkContainer>
               <S.LinkText>
                 계정이 없으신가요?{" "}
-                <S.StyledLink to="/auth/signup">회원가입</S.StyledLink>
+                <S.StyledLink to="/staff/signup">회원가입</S.StyledLink>
               </S.LinkText>
             </S.LinkContainer>
 
