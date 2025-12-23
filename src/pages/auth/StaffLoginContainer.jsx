@@ -155,6 +155,18 @@ const StaffLoginContainer = () => {
               />
             </S.InputGroup>
 
+            <S.InputGroup>
+              <S.Label>비밀번호</S.Label>
+              <S.Input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                placeholder="비밀번호를 입력하세요"
+                required
+              />
+            </S.InputGroup>
+
             {error && <S.ErrorMessage>{error}</S.ErrorMessage>}
 
             <S.SubmitButton type="submit">로그인</S.SubmitButton>
