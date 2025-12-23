@@ -16,6 +16,7 @@ import FindPassword from "../pages/auth/FindPassword";
 import ResetPassword from "../pages/auth/ResetPassword";
 import ChangePassword from "../pages/mypage/ChangePassword";
 import MyPageLayOut from "../pages/mypage/MyPageLayOut";
+import StaffSignUpContainer from "../pages/auth/StaffSignUpContainer";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "/auth/reset-password",
     element: <ResetPassword />
+  },
+  {
+    path: "staff/signup",
+    element: <StaffSignUpContainer />
   },
   {
     path: "/auth/oauth2/redirect",
