@@ -57,14 +57,16 @@ const Login = () => {
       ) : (
         <S.MainContent>
           <S.FormCard>
-            <S.LoginTypeButton onClick={setViewMemberHandler}>
-              <S.LoginTypeText>일반</S.LoginTypeText>
-              <S.LoginTypeArrow>→</S.LoginTypeArrow>
-            </S.LoginTypeButton>
-            <S.LoginTypeButton onClick={setViewStaffHandler}>
-              <S.LoginTypeText>의료진</S.LoginTypeText>
-              <S.LoginTypeArrow>→</S.LoginTypeArrow>
-            </S.LoginTypeButton>
+            <S.LoginTypeButtonWrapper>
+              <S.LoginTypeButton onClick={setViewMemberHandler}>
+                <S.LoginTypeText>일반</S.LoginTypeText>
+                <S.LoginTypeArrow>→</S.LoginTypeArrow>
+              </S.LoginTypeButton>
+              <S.LoginTypeButton onClick={setViewStaffHandler}>
+                <S.LoginTypeText>의료진</S.LoginTypeText>
+                <S.LoginTypeArrow>→</S.LoginTypeArrow>
+              </S.LoginTypeButton>
+            </S.LoginTypeButtonWrapper>
           </S.FormCard>
         </S.MainContent>
       )}
