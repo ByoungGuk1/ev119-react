@@ -17,6 +17,8 @@ import ResetPassword from "../pages/auth/ResetPassword";
 import ChangePassword from "../pages/mypage/ChangePassword";
 import MyPageLayOut from "../pages/mypage/MyPageLayOut";
 import StaffSignUpContainer from "../pages/auth/StaffSignUpContainer";
+import AdminDashboard from "../pages/admin/AdminDashboard";
+import AdminLogin from "../pages/admin/AdminLogin";
 
 const router = createBrowserRouter([
   {
@@ -44,7 +46,7 @@ const router = createBrowserRouter([
     element: <ResetPassword />
   },
   {
-    path: "staff/signup",
+    path: "/staff/signup",
     element: <StaffSignUpContainer />
   },
   {
@@ -70,6 +72,14 @@ const router = createBrowserRouter([
   {
     path: "/main/help",
     element: <HelpPage />
+  },
+  {
+    path:"/admin",
+    element: <AdminLogin />
+  },
+  {
+    path: "/admin/intro",
+    element: <AdminDashboard />
   },
   {
     path: "/main/mypage",
