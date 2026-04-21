@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+## 프로젝트 #2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+EV119 - 공공데이터를 활용하여 빠르게 응급실에 도착하고빅데이터를 활용하여 간단한 응급처치에 대한 조언을 구할 수 있는 서비스
 
-## Available Scripts
+### 사용 기술
 
-In the project directory, you can run:
+- Language : Java(JDK17), HTML, CSS, JavaScript <br />
+- Server, Cloud : Apache Tomcat 9.0 <br />
+- Framework : Spring Boot 3.2.x, React 18.x <br />
+- DB : Oracle 21C, Redis 8.x <br />
+- IDE : IntelliJ IDEA 2025.2.3, Visual Studio Code <br />
+- API, Library : JPA, OAuth2, Spring Security, JWT, OpenAI,카카오 맵 API, 응급실 정보 API , 외상센터 정보 API, ...<br />
+- DevOps, Tools : Git, GitHub, Docker, Figma, ERDCloud <br />
 
-### `yarn start`
+### 내 역할
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. 마이페이지 - 회원정보 수정, 비밀번호 변경 <br />
+2. 마이페이지 - 건강정보 조회 및 관리 <br />
+3. 마이페이지 - 과거 병원 방문이력 <br />
+4. 마이페이지 - 회원 탈퇴 <br />
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img src="https://raw.githubusercontent.com/ByoungGuk1/ByoungGuk1/main/images/ev119/메인.png" alt="ev119_프로젝_메인화면" width="600" />
 
-### `yarn test`
+### 핵심 기능
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+입력된 사용자의 정보를 활용하여 응급 상황 발생 시 적절한 조치 방법 제공
 
-### `yarn build`
+### 간략 시스템 구성도
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img src="https://raw.githubusercontent.com/ByoungGuk1/ByoungGuk1/main/images/ev119/시스템구성도.png" alt="ev119_시스템구성도" width="600" />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 데이터베이스 구조
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img src="https://raw.githubusercontent.com/ByoungGuk1/ByoungGuk1/main/images/ev119/ERDCloud.png" alt="ev119_ERDCloud" width="600" />
 
-### `yarn eject`
+### 기능명세서
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<img src="https://raw.githubusercontent.com/ByoungGuk1/ByoungGuk1/main/images/ev119/기능명세서.png" alt="ev119_기능명세서" width="600" />
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### UI/UX 가이드
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<img src="https://raw.githubusercontent.com/ByoungGuk1/ByoungGuk1/main/images/ev119/UIUX가이드.png" alt="ev119_UI_UX_가이드" width="600" />
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 계정관리
 
-## Learn More
+<img src="https://raw.githubusercontent.com/ByoungGuk1/ByoungGuk1/main/images/ev119/계정관리.png" alt="ev119_계정관리" width="600" />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 건강정보관리
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="https://raw.githubusercontent.com/ByoungGuk1/ByoungGuk1/main/images/ev119/건강정보관리.png" alt="ev119_건강정보관리" width="600" />
